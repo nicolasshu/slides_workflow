@@ -50,3 +50,12 @@ pandoc --list-highlight-styles
 ```
 
 Garrick Aden-Buie provides a very nice demonstration of the highlights in his [website](https://www.garrickadenbuie.com/blog/pandoc-syntax-highlighting-examples/)
+
+
+## Additional Plugins for RevealJS
+
+There are soooo many plugins to use if you wish to use RevealJS! You can find many of them in the link below. 
+
+https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware
+
+These however might not be properly implemented in `pandoc`, and if so, you will just have to code it in HTML, and pandoc will not touch it when converting it to RevealJS HTML. 
