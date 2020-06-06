@@ -285,18 +285,18 @@ $endif$
         dependencies: [
           { src: '$revealjs-url$/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: '$revealjs-url$/plugin/zoom-js/zoom.js', async: true },
-$if(notes-server)$
+        $if(notes-server)$
           { src: '$revealjs-url$/socket.io/socket.io.js', async: true },
           { src: '$revealjs-url$/plugin/notes-server/client.js', async: true },
-$endif$
-$if(mathjax)$
+        $endif$
+        $if(mathjax)$
           { src: '$revealjs-url$/plugin/math/math.js', async: true },
-$endif$
-          { src: '$revealjs-url$/plugin/notes/notes.js', async: true },
+        $endif$
+        //   { src: '$revealjs-url$/plugin/notes/notes.js', async: true },
           { src: '$revealjs-url$/plugin/menu/menu.js' },
           { src: '$revealjs-url$/plugin/verticator/verticator.js' },
-          { src: '$revealjs-url$/plugin/toolbar/toolbar.js'},
-        //   { src: 'plugin/chalkboard/chalkboard.js' },
+        //   { src: '$revealjs-url$/plugin/toolbar/toolbar.js'},
+          { src: '$revealjs-url$/plugin/chalkboard/chalkboard.js' },
         //   { src: '$revealjs-url$/plugin/reveal-code-focus/highlight.pack.js'},
         //   { src: '$revealjs-url$/plugin/reveal-code-focus/reveal-code-focus.js',
         //     sync: true,
@@ -304,15 +304,27 @@ $endif$
         //         RevealCodeFocus();
         //     }},
         ],
-        // keyboard: {
-        //     67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
-        //     66: function() { RevealChalkboard.toggleChalkboard() },	    // toggle chalkboard when 'b' is pressed
-        //     46: function() { RevealChalkboard.clear() },                // clear chalkboard when 'DEL' is pressed
-        //     8:  function() { RevealChalkboard.reset() },                // reset chalkboard data on current slide when 'BACKSPACE' is pressed
-        //     68: function() { RevealChalkboard.download() },             // downlad recorded chalkboard drawing when 'd' is pressed
-        //     88: function() { RevealChalkboard.colorNext() },            // cycle colors forward when 'x' is pressed
-        //     89: function() { RevealChalkboard.colorPrev() },            // cycle colors backward when 'y' is pressed
-        // },
+        chalkboard: { // font-awesome.min.css must be available
+                src: "chalkboard/chalkboard.json",
+                toggleChalkboardButton: { left: "80px" },
+                toggleNotesButton: { left: "130px" },
+                // pen:  [ 'crosshair', 'pointer' ]
+                theme: "whiteboard",
+                // background: [ 'rgba(127,127,127,.1)' , 'reveal.js-plugins/chalkboard/img/whiteboard.png' ],
+                pen:  [ 'crosshair', 'pointer' ]
+                // pen: [ url('reveal.js-plugins/chalkboard/img/boardmarker.png), auto' , 'url(reveal.js-plugins/chalkboard/img/boardmarker.png), auto' ],
+                // color: [ 'rgba(0,0,255,1)', 'rgba(0,0,255,0.5)' ],
+                // draw: [ (RevealChalkboard) ?  RevealChalkboard.drawWithPen : null , (RevealChalkboard) ? RevealChalkboard.drawWithPen : null ],
+        },
+        keyboard: {
+            67: function() { RevealChalkboard.toggleNotesCanvas() },    // toggle notes canvas when 'c' is pressed
+            66: function() { RevealChalkboard.toggleChalkboard() },	    // toggle chalkboard when 'b' is pressed
+            46: function() { RevealChalkboard.clear() },                // clear chalkboard when 'DEL' is pressed
+            8:  function() { RevealChalkboard.reset() },                // reset chalkboard data on current slide when 'BACKSPACE' is pressed
+            68: function() { RevealChalkboard.download() },             // downlad recorded chalkboard drawing when 'd' is pressed
+            88: function() { RevealChalkboard.colorNext() },            // cycle colors forward when 'x' is pressed
+            89: function() { RevealChalkboard.colorPrev() },            // cycle colors backward when 'y' is pressed
+        },
       });
     </script>
   $for(include-after)$
