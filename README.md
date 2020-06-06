@@ -3,10 +3,6 @@
 ## Descriptions 
 This is a very quick way of making slides from Markdown files and then to compile them to RevealJS and/or 
 
-## Manual 
-The most detailed manual can be found [here](https://pandoc.org/MANUAL.html)
-
-
 
 ## Quick Start 
 ### Requirements
@@ -40,6 +36,9 @@ At the time of making this workflow (2020-June-05), pandoc had some issues with 
 
 Also, this includes the CSS file and compilation file that [Dr. Matthieu Bloch](https://bloch.ece.gatech.edu/about.html) used to make his lecture slides, who was monumental to help me understand how to make this workflow. He has an even better [guide](https://bloch.ece.gatech.edu/2020/02/15/workflow.html) on his website. You should check it out! He posted that post a few days later after I had a solid workflow going, so he has even better ideas and more experience on this! He's also a really great professor, so check him out! 
 
+# Instructions
+## Manual 
+The most detailed manual can be found [here](https://pandoc.org/MANUAL.html). It's a lot to read, but most of your questions you have can be answered there. 
 
 ## Types of Code Syntax Highlighting
 
@@ -59,3 +58,39 @@ There are soooo many plugins to use if you wish to use RevealJS! You can find ma
 https://github.com/hakimel/reveal.js/wiki/Plugins,-Tools-and-Hardware
 
 These however might not be properly implemented in `pandoc`, and if so, you will just have to code it in HTML, and pandoc will not touch it when converting it to RevealJS HTML. 
+
+## Variables
+
+Variables can be passed with the flag `-V`. For example:
+```
+$ pandoc ... \
+    -V transition=linear
+```
+
+However each different output has a different set of variables. A full description of them can be found [here](https://pandoc.org/MANUAL.html#variables). Below are a few of them
+
+- RevealJS Variables
+    - revealjs-url
+    - slide-level
+    - incremental
+    - theme
+    - center
+    - controls
+    - progress
+    - slideNumber
+    - transition
+- Beamer Variables
+    - aspectratio
+    - beamerarticle
+    - beameroption
+    - institute
+    - logo
+    - navigation
+    - section-titles
+    - theme
+    - colortheme
+    - fonttheme
+    - innertheme
+    - outertheme
+    - themeoptions
+    - titlegraphic
