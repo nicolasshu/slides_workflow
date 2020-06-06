@@ -20,7 +20,7 @@ pandoc $file \
     -V center=false \
     -V theme=serif \
     --slide-level=3 \
-    --highlight-style=pygments \
+    --highlight-style=breezedark \
     --mathjax=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js \
     -V controls=true \
     -V progress=true \
