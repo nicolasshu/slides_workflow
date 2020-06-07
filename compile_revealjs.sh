@@ -25,7 +25,6 @@ pandoc $file \
     -V controls=true \
     -V progress=true \
     -V slideNumber=true \
-    --toc \
     -V transition=none \
 
 # -s, --standalone
