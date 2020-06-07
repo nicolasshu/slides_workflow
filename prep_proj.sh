@@ -16,3 +16,4 @@ cp compile_revealjs.sh $projname
 cp example.md $projname/slides.md
 cp -r reveal.js $projname
 cp -r custom_styles $projname
+cp -r assets $projname
