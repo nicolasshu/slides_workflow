@@ -25,6 +25,9 @@ $$\boldsymbol{x} = \int_\mathbb{C} a e^{j\omega \boldsymbol{t}}d\omega$$
 import numpy as np 
 np.shape(x)
 ```
+<div style="position: absolute; top: 130%; left: 90%; font-size: large;">
+    Reference: Eebo Journal
+</div>
 
 ## Vertical Slide
 
