@@ -249,6 +249,8 @@ $endif$
 $if(zoomKey)$
         // Modifier key used to click-zoom to part of the slide
         zoomKey: '$zoomKey$',
+$else$
+        zoomKey: "alt",
 $endif$
 $if(mathjax)$
         math: {
@@ -297,6 +299,7 @@ $endif$
           { src: '$revealjs-url$/plugin/verticator/verticator.js' },
         //   { src: '$revealjs-url$/plugin/toolbar/toolbar.js'},
           { src: '$revealjs-url$/plugin/chalkboard/chalkboard.js' },
+          { src: '$revealjs-url$/plugin/reveald3/reveald3.js' },
         //   { src: '$revealjs-url$/plugin/reveal-code-focus/highlight.pack.js'},
         //   { src: '$revealjs-url$/plugin/reveal-code-focus/reveal-code-focus.js',
         //     sync: true,
