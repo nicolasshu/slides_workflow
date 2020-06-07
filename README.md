@@ -52,6 +52,41 @@ pandoc --list-highlight-styles
 
 Garrick Aden-Buie provides a very nice demonstration of the highlights in his [website](https://www.garrickadenbuie.com/blog/pandoc-syntax-highlighting-examples/)
 
+# RevealJS Remarks
+
+## Adding a floating text 
+
+The easiest way I've found to add a floating text is by using a `div` object, and setting its style position to `absolute`. E.g. 
+
+```markdown
+...
+
+# Slide 3
+![](/path/to/image)
+<div style="position: absolute; top: 250%; left: 90%; font-size: large;">
+    Reference: Eebo Journal
+</div>
+
+# Slide 4
+...
+```
+## Adding a Webpage as a Slide
+
+You may use `iframe`, but I found that the best way is to use 
+
+```
+...
+# Slide 3
+ 
+# 
+<section data-background-iframe="https://www.falstad.com/ripple/"></section>
+
+# Slide 5
+...
+
+```
+
+
 
 ## Additional Plugins for RevealJS
 
