@@ -465,6 +465,12 @@ body {
 /*********************************************
  * SLIDES
  *********************************************/
+.scrollable {
+  overflow-y: auto  !important;
+  overflow-x: hidden !important;
+  height: 100%;
+}
+
 .reveal {
   position: relative;
   width: 100%;

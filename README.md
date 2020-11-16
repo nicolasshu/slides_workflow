@@ -86,6 +86,36 @@ You may use `iframe`, but I found that the best way is to use
 
 ```
 
+## Adding a Class to an Object
+
+You can add a class to an object by using 
+
+```markdown
+:::{.class_name}
+[object]
+:::
+```
+
+I just added the CSS class `scrollable` to `reveal.js/css/reveal.css`
+```css
+.scrollable {
+    overflow-y: auto  !important;
+    overflow-x: hidden !important;
+    height: 100%;
+}
+```
+
+This allows any larger image to be added and makes that slide scrollable. Therefore, you can create a slide as such:
+
+```markdown
+:::{.scrollable}
+
+# Slide Title
+![](Very_tall_image)
+Very long text
+
+:::
+```
 
 
 ## Additional Plugins for RevealJS
