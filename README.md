@@ -54,6 +54,21 @@ Garrick Aden-Buie provides a very nice demonstration of the highlights in his [w
 
 # RevealJS Remarks
 
+## Adding Columns
+
+In order to add columns, you can use the following syntax
+
+```markdown
+::: columns
+:::: column
+This
+::::
+:::: column
+That
+::::
+```
+
+
 ## Adding a floating text 
 
 The easiest way I've found to add a floating text is by using a `div` object, and setting its style position to `absolute`. E.g. 
